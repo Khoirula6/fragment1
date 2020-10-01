@@ -27,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
         chatFragment = new ChatFragment();
         statusFragment = new StatusFragment();
         callFragment = new CallFragment();
+        callFragment = new ExploreFragment();
 
         adapterHome = new AdapterHome(getSupportFragmentManager());
         adapterHome.addItem(chatFragment, "Chat");
         adapterHome.addItem(callFragment, "Call");
+        adapterHome.addItem(callFragment, "explore");
         adapterHome.addItem(statusFragment, "Status");
 
         vpMain.setAdapter(adapterHome);
